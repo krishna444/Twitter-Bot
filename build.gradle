@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility=1.8
+targetCompatibility=1.8
+
+repositories{
+	mavenCentral()
+	flatDir{
+		dirs 'libs'
+	}
+}
+dependencies {
+// https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core
+//compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.6'
+compile fileTree(dir:'libs', include:['*.jar'])
+testCompile group: 'junit',name:'junit', version:'4.+'
+}
