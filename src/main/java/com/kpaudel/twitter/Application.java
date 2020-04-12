@@ -20,8 +20,4 @@ public class Application {
         }, 1000, 5000);
 
     }
-
-    public void testClass(){
-        System.out.println("test");
-    }
 }
